@@ -49,12 +49,12 @@ type BaseDto struct {
 
 // PaymentInstrument ...
 type PaymentInstrument struct {
-	Token                           string                           `json:"token"`
-	AnalyticsId                     *string                          `json:"analyticsId,omitempty"`
-	TokenType                       *string                          `json:"tokenType,omitempty"`
-	PaymentInstrumentType           *string                          `json:"paymentInstrumentType,omitempty"`
-	PaymentInstrumentData           *interface{}                     `json:"paymentInstrumentData,omitempty"`
-	ThreeDomainSecureAuthentication *ThreeDomainSecureAuthentication `json:"threeDSecureAuthentication,omitempty"`
+	Token                      string                      `json:"token"`
+	AnalyticsId                *string                     `json:"analyticsId,omitempty"`
+	TokenType                  *string                     `json:"tokenType,omitempty"`
+	PaymentInstrumentType      *string                     `json:"paymentInstrumentType,omitempty"`
+	PaymentInstrumentData      *interface{}                `json:"paymentInstrumentData,omitempty"`
+	ThreeDSecureAuthentication *ThreeDSecureAuthentication `json:"threeDSecureAuthentication,omitempty"`
 }
 
 // PaymentCardToken ...
@@ -83,8 +83,8 @@ type BinData struct {
 	IssuerCurrencyCode         *string `json:"issuerCurrencyCode,omitempty"`
 }
 
-// ThreeDomainSecureAuthentication ...
-type ThreeDomainSecureAuthentication struct {
+// ThreeDSecureAuthentication ...
+type ThreeDSecureAuthentication struct {
 	ResponseCode    string  `json:"responseCode"`
 	ReasonCode      *string `json:"reasonCode,omitempty"`
 	ReasonText      *string `json:"reasonText,omitempty"`
@@ -173,12 +173,12 @@ type RequiredAction struct {
 
 // VaultedPaymentInstrument ...
 type VaultedPaymentInstrument struct {
-	Token                           string                           `json:"token"`
-	AnalyticsId                     string                           `json:"analyticsId,omitempty"`
-	TokenType                       string                           `json:"tokenType,omitempty"`
-	PaymentInstrumentType           string                           `json:"paymentInstrumentType,omitempty"`
-	PaymentInstrumentData           interface{}                      `json:"paymentInstrumentData,omitempty"`
-	ThreeDomainSecureAuthentication *ThreeDomainSecureAuthentication `json:"threeDSecureAuthentication,omitempty"`
+	Token                           string                      `json:"token"`
+	AnalyticsId                     string                      `json:"analyticsId,omitempty"`
+	TokenType                       string                      `json:"tokenType,omitempty"`
+	PaymentInstrumentType           string                      `json:"paymentInstrumentType,omitempty"`
+	PaymentInstrumentData           interface{}                 `json:"paymentInstrumentData,omitempty"`
+	ThreeDomainSecureAuthentication *ThreeDSecureAuthentication `json:"threeDSecureAuthentication,omitempty"`
 }
 
 // WorkflowExecutionError ...
