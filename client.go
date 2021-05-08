@@ -12,8 +12,8 @@ type Client struct {
 	baseUrl    string
 }
 
-func (c *Client) GetRequest(ctx context.Context, idempotencyKey, path string, apiReq interface{}, apiResp Dto) error {
-	req, err := c.createRequest(http.MethodGet, idempotencyKey, path, apiReq)
+func (c *Client) GetRequest(ctx context.Context, idempotencyKey, path string, apiResp Dto) error {
+	req, err := c.createRequest(http.MethodGet, idempotencyKey, path, nil)
 	if err != nil {
 		return wrapError(err)
 	}

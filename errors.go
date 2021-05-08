@@ -6,9 +6,10 @@ import (
 )
 
 var (
-	ApiKeyMissing         = errors.New("API Key is missing")
+	ApiKeyMissing         = errors.New("ApiKey is missing")
 	BaseUrlMissing        = errors.New("base Url is missing")
 	IdempotencyKeyMissing = errors.New("Idempotency-Key is missing")
+	PaymentIdMissing      = errors.New("unique payment id is required")
 )
 
 type Error struct {
